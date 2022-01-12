@@ -1,0 +1,68 @@
+section#about {
+  margin-top: 4em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+
+  .title {
+    text-align: center;
+    position: relative;
+
+    &::before {
+      @include titleBg();
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #2c2c2c;
+      line-height: 31.2px;
+    }
+  }
+
+  .desc {
+    margin: 2em auto;
+    text-align: center;
+    width: 90%;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    width: 90%;
+
+    &__fact {
+      // padding: 1em;
+      padding: 1em 0;
+      text-align: center;
+
+      .icon {
+        img {
+          transform: scale(1.2);
+        }
+
+        i {
+          font-size: 42px;
+          // font-weight: 300;
+        }
+      }
+
+      .counter-box {
+        .counter {
+          display: inline-block;
+          font-size: 48px;
+          font-weight: 300;
+          color: #2c2c2c;
+        }
+      }
+
+      .counter-title {
+        font-size: 15px;
+      }
+    }
+  }
+}
